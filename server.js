@@ -40,7 +40,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ pesan: 'Terjadi kesalahan pada server' });
 });
 
-if (require.main === module) {
+if (require.main === module && !process.env.VERCEL) {
   hubungkan()
     .then(() => {
       console.log('Terhubung ke MongoDB');
