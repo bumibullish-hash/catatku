@@ -34,8 +34,17 @@ app.use((err, req, res, next) => {
     return res.status(400).json({ pesan: 'Data yang dikirim tidak valid' });
   }
   console.error(err);
-  if (err.name === 'MongooseServerSelectionError' || err.message.includes('MONGODB_URI')) {
-    return res.status(503).json({ pesan: 'Tidak dapat terhubung ke database' });
+  if (err.message.includes('MONGODB_URI')) {
+    return res.status(503).json({ pesan: 'MONGODB_URI belum diisi di server. Isi environment variable lalu deploy ulang.' });
+  }
+  if (err.name === 'MongoParseError') {
+    return res.status(503).json({ pesan: 'Isi MONGODB_URI tidak valid. Periksa tanda kutip atau spasi pada alamat koneksi.' });
+  }
+  if (err.message.includes('bad auth') || err.code === 18) {
+    return res.status(503).json({ pesan: 'Username atau password database salah. Periksa MONGODB_URI.' });
+  }
+  if (err.name === 'MongooseServerSelectionError') {
+    return res.status(503).json({ pesan: 'Server tidak bisa menjangkau MongoDB. Periksa Network Access di MongoDB Atlas.' });
   }
   res.status(500).json({ pesan: 'Terjadi kesalahan pada server' });
 });
