@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beranda - CatatKu</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-md navbar-catatku sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="brand-tanda"><i class="bi bi-pencil-fill"></i></span>CatatKu
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama" aria-controls="menuUtama" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuUtama">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tugas.html">Tugas</a></li>
+          <li class="nav-item"><a class="nav-link" href="catatan.html">Catatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="halaman flex-grow-1">
+    <div class="container">
+      <div class="judul-halaman">
+        <div>
+          <h1>Tugas apa yang perlu selesai dulu?</h1>
+          <p id="tanggalHariIni"></p>
+        </div>
+        <a class="btn btn-primary" href="tugas.html?baru=1"><i class="bi bi-plus-lg"></i> Tambah tugas</a>
+      </div>
+
+      <div class="kertas ringkasan mb-4">
+        <div class="stat">
+          <span class="angka" id="angkaBelumSelesai">-</span>
+          <span class="keterangan">Belum selesai</span>
+        </div>
+        <div class="stat stat-selesai">
+          <span class="angka" id="angkaSelesai">-</span>
+          <span class="keterangan">Selesai</span>
+        </div>
+        <div class="stat stat-penting">
+          <span class="angka" id="angkaMendekati">-</span>
+          <span class="keterangan">Mendekati deadline</span>
+          <span class="catatan-kecil">dalam 3 hari ke depan</span>
+        </div>
+        <div class="stat">
+          <span class="angka" id="angkaCatatan">-</span>
+          <span class="keterangan">Catatan</span>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <h2 class="h5 mb-0">Tugas terdekat</h2>
+        <a class="fw-semibold" href="tugas.html">Lihat semua tugas</a>
+      </div>
+      <div class="kertas" id="daftarTerdekat">
+        <div class="kosong">
+          <div class="spinner-border spinner-border-sm" role="status"></div>
+          <p class="mt-2 mb-0">Memuat data...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="kaki">
+    <div class="container">CatatKu - Proyek Pemrograman Web</div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/umum.js"></script>
+  <script src="js/beranda.js"></script>
+</body>
+</html>

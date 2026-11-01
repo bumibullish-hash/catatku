@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catatan - CatatKu</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-md navbar-catatku sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="brand-tanda"><i class="bi bi-pencil-fill"></i></span>CatatKu
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama" aria-controls="menuUtama" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuUtama">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tugas.html">Tugas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="catatan.html" aria-current="page">Catatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="halaman flex-grow-1">
+    <div class="container">
+      <div class="judul-halaman">
+        <div>
+          <h1>Catatan</h1>
+          <p>Simpan jadwal, rangkuman materi, dan hal penting lainnya.</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="tombolTambah"><i class="bi bi-plus-lg"></i> Tambah catatan</button>
+      </div>
+
+      <div class="kertas p-3 mb-3">
+        <label class="visually-hidden" for="cari">Cari catatan</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+          <input type="search" class="form-control" id="cari" placeholder="Cari catatan">
+        </div>
+      </div>
+
+      <p class="teks-redup small mb-2" id="infoJumlah"></p>
+      <div class="row g-3" id="daftarCatatan">
+        <div class="col-12 kertas">
+          <div class="kosong">
+            <div class="spinner-border spinner-border-sm" role="status"></div>
+            <p class="mt-2 mb-0">Memuat data...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalCatatan" tabindex="-1" aria-labelledby="judulModalCatatan" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="judulModalCatatan">Tambah catatan</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formCatatan" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="judul">Judul catatan</label>
+              <input type="text" class="form-control" id="judul" required minlength="3" maxlength="80" placeholder="Contoh: Jadwal konsultasi dosen">
+              <div class="invalid-feedback">Judul harus diisi, minimal 3 karakter.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="isi">Isi catatan</label>
+              <textarea class="form-control" id="isi" rows="6" required maxlength="2000" placeholder="Tulis catatanmu di sini"></textarea>
+              <div class="invalid-feedback">Isi catatan tidak boleh kosong.</div>
+            </div>
+            <div>
+              <span class="form-label d-block">Warna kartu</span>
+              <div class="d-flex gap-2" role="radiogroup" aria-label="Warna kartu">
+                <input type="radio" class="btn-check" name="warna" id="warnaKuning" value="kuning" checked>
+                <label class="swatch warna-kuning" for="warnaKuning" title="Kuning"><span class="visually-hidden">Kuning</span></label>
+                <input type="radio" class="btn-check" name="warna" id="warnaBiru" value="biru">
+                <label class="swatch warna-biru" for="warnaBiru" title="Biru"><span class="visually-hidden">Biru</span></label>
+                <input type="radio" class="btn-check" name="warna" id="warnaHijau" value="hijau">
+                <label class="swatch warna-hijau" for="warnaHijau" title="Hijau"><span class="visually-hidden">Hijau</span></label>
+                <input type="radio" class="btn-check" name="warna" id="warnaMerah" value="merah">
+                <label class="swatch warna-merah" for="warnaMerah" title="Merah muda"><span class="visually-hidden">Merah muda</span></label>
+                <input type="radio" class="btn-check" name="warna" id="warnaUngu" value="ungu">
+                <label class="swatch warna-ungu" for="warnaUngu" title="Ungu"><span class="visually-hidden">Ungu</span></label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary" id="tombolSimpan" form="formCatatan">Simpan catatan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalHapus" tabindex="-1" aria-labelledby="judulModalHapus" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="judulModalHapus">Hapus catatan?</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          Catatan <strong id="namaCatatanDihapus"></strong> akan dihapus permanen dan tidak bisa dikembalikan.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-danger" id="tombolHapus">Hapus catatan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="kaki">
+    <div class="container">CatatKu - Proyek Pemrograman Web</div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/umum.js"></script>
+  <script src="js/catatan.js"></script>
+</body>
+</html>

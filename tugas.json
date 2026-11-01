@@ -1,0 +1,114 @@
+[
+  {
+    "judul": "Laporan praktikum basis data",
+    "deskripsi": "Lengkapi ERD dan hasil query pada bab 3.",
+    "matkul": "Basis Data",
+    "prioritas": "tinggi",
+    "deadline": "2026-10-31",
+    "selesai": false,
+    "dibuat": {
+      "$date": "2026-10-29T02:22:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-29T02:22:22.622Z"
+    }
+  },
+  {
+    "judul": "Presentasi proyek pemrograman web",
+    "deskripsi": "Siapkan demo dan pembagian bicara tiap anggota.",
+    "matkul": "Pemrograman Web",
+    "prioritas": "tinggi",
+    "deadline": "2026-11-01",
+    "selesai": false,
+    "dibuat": {
+      "$date": "2026-10-29T05:42:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-29T05:42:22.622Z"
+    }
+  },
+  {
+    "judul": "Kerjakan soal latihan algoritma",
+    "deskripsi": "Soal nomor 1 sampai 10 tentang rekursi.",
+    "matkul": "Algoritma dan Struktur Data",
+    "prioritas": "sedang",
+    "deadline": "2026-11-03",
+    "selesai": false,
+    "dibuat": {
+      "$date": "2026-10-29T19:02:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-29T19:02:22.622Z"
+    }
+  },
+  {
+    "judul": "Rangkuman bab 4 jaringan komputer",
+    "deskripsi": "Fokus pada model OSI dan TCP/IP.",
+    "matkul": "Jaringan Komputer",
+    "prioritas": "sedang",
+    "deadline": "2026-11-05",
+    "selesai": false,
+    "dibuat": {
+      "$date": "2026-10-30T03:22:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-30T03:22:22.622Z"
+    }
+  },
+  {
+    "judul": "Baca jurnal untuk tugas metodologi",
+    "deskripsi": "",
+    "matkul": "Metodologi Penelitian",
+    "prioritas": "rendah",
+    "deadline": "2026-11-08",
+    "selesai": false,
+    "dibuat": {
+      "$date": "2026-10-30T11:42:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-30T11:42:22.622Z"
+    }
+  },
+  {
+    "judul": "Tugas kelompok analisis sistem",
+    "deskripsi": "Gabungkan diagram use case dari semua anggota.",
+    "matkul": "Analisis dan Perancangan Sistem",
+    "prioritas": "sedang",
+    "deadline": "2026-11-11",
+    "selesai": false,
+    "dibuat": {
+      "$date": "2026-10-30T20:02:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-30T20:02:22.622Z"
+    }
+  },
+  {
+    "judul": "Kuis online statistika",
+    "deskripsi": "Kuis distribusi normal sudah dikerjakan.",
+    "matkul": "Statistika",
+    "prioritas": "rendah",
+    "deadline": "2026-10-29",
+    "selesai": true,
+    "dibuat": {
+      "$date": "2026-10-28T09:42:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-28T09:42:22.622Z"
+    }
+  },
+  {
+    "judul": "Kumpulkan form KRS",
+    "deskripsi": "",
+    "matkul": "",
+    "prioritas": "rendah",
+    "deadline": "2026-10-27",
+    "selesai": true,
+    "dibuat": {
+      "$date": "2026-10-27T00:22:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-27T00:22:22.622Z"
+    }
+  }
+]

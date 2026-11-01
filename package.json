@@ -1,0 +1,16 @@
+{
+  "name": "catatku",
+  "version": "1.0.0",
+  "description": "Aplikasi manajemen tugas dan catatan kuliah dengan MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "reset": "node reset-data.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongoose": "^8.24.7"
+  }
+}

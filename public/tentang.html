@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang - CatatKu</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-md navbar-catatku sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="brand-tanda"><i class="bi bi-pencil-fill"></i></span>CatatKu
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama" aria-controls="menuUtama" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuUtama">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tugas.html">Tugas</a></li>
+          <li class="nav-item"><a class="nav-link" href="catatan.html">Catatan</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tentang.html" aria-current="page">Tentang</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="halaman flex-grow-1">
+    <div class="container">
+      <div class="judul-halaman">
+        <div>
+          <h1>Tentang CatatKu</h1>
+          <p>Aplikasi web untuk mencatat tugas dan catatan kuliah di satu tempat.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="kertas p-4 h-100">
+            <h2 class="h5">Yang bisa dilakukan</h2>
+            <ul class="daftar-fitur">
+              <li>Menambah, mengedit, dan menghapus tugas, serta menandainya selesai.</li>
+              <li>Mencari tugas, lalu menyaringnya berdasarkan status dan prioritas.</li>
+              <li>Menulis catatan berwarna: tambah, edit, hapus, dan cari.</li>
+              <li>Melihat jumlah tugas, deadline terdekat, dan jumlah catatan di beranda.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="kertas p-4 h-100">
+            <h2 class="h5">Cara kerjanya</h2>
+            <p>Halaman di browser mengirim permintaan ke server Node.js. Server membaca dan menyimpan data ke database MongoDB, lalu mengirim hasilnya kembali ke halaman.</p>
+            <p class="alur mb-0">
+              <span>Browser</span><i class="bi bi-arrow-right"></i>
+              <span>Server Node.js</span><i class="bi bi-arrow-right"></i>
+              <span>MongoDB</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="kertas p-4">
+            <h2 class="h5 mb-3">Teknologi yang digunakan</h2>
+            <div class="table-responsive">
+              <table class="table tabel-info mb-0">
+                <tbody>
+                  <tr><th scope="row">HTML</th><td>Struktur semua halaman.</td></tr>
+                  <tr><th scope="row">CSS</th><td>Tema warna, tipografi, dan penyesuaian tampilan di atas Bootstrap.</td></tr>
+                  <tr><th scope="row">Bootstrap 5</th><td>Navbar, grid responsif, modal, form, dan notifikasi.</td></tr>
+                  <tr><th scope="row">JavaScript</th><td>Mengambil dan mengirim data ke server, menampilkan daftar, mencari, menyaring, dan memeriksa isian form.</td></tr>
+                  <tr><th scope="row">Node.js dan Express</th><td>Menjalankan server dan menyediakan API untuk tugas dan catatan.</td></tr>
+                  <tr><th scope="row">MongoDB dan Mongoose</th><td>Menyimpan data tugas dan catatan di database MongoDB, dihubungkan ke server lewat Mongoose.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="kertas p-4">
+            <h2 class="h5 mb-3">Anggota kelompok</h2>
+            <div class="table-responsive">
+              <table class="table mb-0">
+                <thead>
+                  <tr><th scope="col">Nama</th><th scope="col">NIM</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Nama anggota 1</td><td>NIM anggota 1</td></tr>
+                  <tr><td>Nama anggota 2</td><td>NIM anggota 2</td></tr>
+                  <tr><td>Nama anggota 3</td><td>NIM anggota 3</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="kaki">
+    <div class="container">CatatKu - Proyek Pemrograman Web</div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/umum.js"></script>
+</body>
+</html>

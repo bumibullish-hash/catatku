@@ -1,0 +1,57 @@
+[
+  {
+    "judul": "Jadwal konsultasi dosen",
+    "isi": "Senin 10.00 dengan Pak Dosen untuk bimbingan proyek.\nBawa draft laporan dan laptop.",
+    "warna": "kuning",
+    "dibuat": {
+      "$date": "2026-10-31T17:42:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-31T17:42:22.622Z"
+    }
+  },
+  {
+    "judul": "Referensi belajar",
+    "isi": "Dokumentasi Bootstrap, MDN Web Docs, dan dokumentasi Express untuk bahan laporan.",
+    "warna": "biru",
+    "dibuat": {
+      "$date": "2026-10-31T22:42:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-10-31T22:42:22.622Z"
+    }
+  },
+  {
+    "judul": "Rumus penting statistika",
+    "isi": "Rata-rata = jumlah data dibagi banyak data.\nVarians = rata-rata kuadrat selisih data terhadap rata-rata.",
+    "warna": "hijau",
+    "dibuat": {
+      "$date": "2026-11-01T03:42:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-11-01T03:42:22.622Z"
+    }
+  },
+  {
+    "judul": "Barang dibawa saat presentasi",
+    "isi": "Laptop, charger, kabel HDMI, dan flashdisk cadangan berisi source code.",
+    "warna": "merah",
+    "dibuat": {
+      "$date": "2026-11-01T08:42:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-11-01T08:42:22.622Z"
+    }
+  },
+  {
+    "judul": "Catatan kuliah jaringan",
+    "isi": "TCP bersifat connection-oriented, UDP tidak. Port HTTP 80, HTTPS 443.",
+    "warna": "ungu",
+    "dibuat": {
+      "$date": "2026-11-01T12:02:22.622Z"
+    },
+    "diubah": {
+      "$date": "2026-11-01T12:02:22.622Z"
+    }
+  }
+]
